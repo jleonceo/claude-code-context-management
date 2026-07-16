@@ -18,7 +18,7 @@ Si ya tienes un fichero de detalle bajo demanda (nuestro puntero blando del [03]
 
 La idea de separar contexto-de-proyecto de instrucciones-al-agente es buena, y no somos los únicos que la vemos. La comunidad coincide en el **concepto**. Lo que no hay es un nombre estándar ni herramientas que lo carguen. El estándar de facto entre herramientas es otro fichero, `AGENTS.md`, que Claude Code no lee de forma nativa (se trae con `@AGENTS.md`). Un `context.md` a medida es convención suelta, sin nadie detrás que lo autocargue.
 
-Y hay evidencia de que un fichero de contexto mal planteado puede hacer daño. Un estudio académico sobre cientos de tareas midió que un fichero de contexto escrito por un humano daba una mejora marginal, uno generado por un modelo empeoraba el resultado, y ambos subían el coste en torno a un 20%. La causa: **duplican** lo que ya está en el código, y un fichero desactualizado se obedece a ciegas. Más ficheros no es mejor por sí solo.
+Y hay evidencia de que un fichero de contexto mal planteado puede hacer daño. Un estudio académico sobre cientos de tareas midió que un fichero de contexto escrito por un humano daba una mejora marginal, uno generado por un modelo empeoraba el resultado, y ambos subían el coste en torno a un 20%. La causa: **duplican** lo que ya está en el código, y un fichero desactualizado se obedece a ciegas. Añadir ficheros, por sí solo, no ayuda.
 
 ## La decisión
 

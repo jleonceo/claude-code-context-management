@@ -1,6 +1,6 @@
 # 02. Tamaño y límites
 
-Aquí están las cifras. Unas son de Anthropic; otras, convención nuestra. Se dice cuál es cuál.
+Aquí están las cifras. Unas son de Anthropic; otras, convención nuestra.
 
 ## `CLAUDE.md`: objetivo por debajo de 200 líneas
 
@@ -10,7 +10,7 @@ Dos matices importantes, y honestos:
 
 Primero, el `CLAUDE.md` se carga **entero**, sea cual sea su longitud. No se trunca. Un `CLAUDE.md` de 500 líneas se carga completo; lo que pasa es que se sigue peor y ocupa más sitio.
 
-Segundo, 200 es un **objetivo, no un acantilado**. No hay una cifra a partir de la cual el fichero "deje de valer". Pero la degradación por longitud sí es oficial: cuanto más largo, menos caso. Por eso el número es útil como referencia, no como frontera mágica.
+Segundo, 200 es un **objetivo, no un acantilado**. No hay una cifra a partir de la cual el fichero "deje de valer". Pero la degradación por longitud sí es oficial: a más líneas, menos adherencia. Por eso el número sirve de referencia para trabajar; conviene no tomarlo como una frontera exacta.
 
 ## `MEMORY.md`: primeras 200 líneas o 25 KB
 
@@ -20,7 +20,7 @@ Por eso `MEMORY.md` es un índice, no un almacén. El detalle vive en ficheros p
 
 ## Por qué importa el tamaño
 
-Dos razones, ya vistas. Una, la adherencia: un fichero hinchado se sigue peor. Dos, el truncado: en `MEMORY.md`, lo que pasa del umbral es como si no existiera. Un fichero de contexto obeso no es que ocupe más. Es que rinde peor y, en el caso de la memoria, esconde parte de sí mismo.
+Dos razones, ya vistas. Una, la adherencia: un fichero hinchado se sigue peor. Dos, el truncado: en `MEMORY.md`, lo que pasa del umbral es como si no existiera. Así que un fichero demasiado grande rinde peor y, en la memoria, deja fuera lo que no cabe sin avisar.
 
 ## Un truco oficial: comentarios que no gastan contexto
 

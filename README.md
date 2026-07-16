@@ -2,7 +2,7 @@
 
 **Cómo evitar que los ficheros de contexto de Claude Code (`CLAUDE.md` y `MEMORY.md`) crezcan hasta saturar el contexto. Una arquitectura de descarga fundamentada en la documentación oficial de Anthropic: teoría, mecanismos y un protocolo probado.**
 
-> **Vigencia.** Verificado contra la documentación oficial de Anthropic el **16 de julio de 2026**. Esto puede cambiar: Claude Code evoluciona rápido. A día de hoy, esta es *una* forma de gestionar estos ficheros, con su porqué. No es una verdad fija ni la única manera.
+> **Vigencia.** Verificado contra la documentación oficial de Anthropic el **16 de julio de 2026**. Esto puede cambiar: Claude Code evoluciona rápido. A día de hoy, esta es *una* forma de gestionar estos ficheros, con su porqué. Puede haber otras.
 
 ## El problema
 
@@ -17,7 +17,7 @@ La primera: el fichero largo se sigue peor. La documentación oficial lo dice co
 
 La segunda: parte deja de cargarse. Del `MEMORY.md` solo entran las primeras 200 líneas o 25 KB, lo que llegue antes. Lo que pase de ahí no se carga al arrancar. Y no hay aviso.
 
-Un fichero de contexto obeso no es que ocupe más: es que rinde peor. Este repo cuenta cómo mantener esos ficheros útiles sin que se coman el contexto. Con los mecanismos oficiales de Anthropic, y con una disciplina de ingeniería encima que hemos probado en un proyecto real.
+Un fichero de contexto que se pasa de tamaño ocupa más contexto y, además, se sigue peor. Este repo cuenta cómo mantener esos ficheros útiles sin que se coman el contexto, con los mecanismos oficiales de Anthropic y una disciplina de ingeniería encima que hemos probado en un proyecto real.
 
 ## Un ejemplo
 
@@ -25,7 +25,7 @@ Nuestro `CLAUDE.md` llegó a 257 líneas. Lo dejamos por debajo de 150 sin perde
 
 ¿Cómo? El detalle que solo hace falta de vez en cuando (tablas, inventarios, procedimientos largos) se movió a un segundo fichero que no se carga al arrancar. En su sitio quedó una línea que dice, en la práctica, "para esto, mira allí". Es un puntero. El núcleo, más corto, se sigue mejor. Y el detalle sigue estando, a un paso de distancia, para cuando de verdad haga falta.
 
-Las cifras son reales. El ejemplo es genérico a propósito: aquí explicamos el método, no publicamos el contenido interno del proyecto.
+Las cifras son reales. El ejemplo es genérico a propósito: aquí explicamos el método sin publicar el contenido interno del proyecto.
 
 ## Lo que dice Anthropic y lo que ponemos nosotros
 
@@ -53,15 +53,15 @@ La regla honesta de todo el repo: separar el dato oficial de la convención prop
 
 ## Por qué funciona
 
-La idea de fondo es sencilla. Lo que se carga siempre tiene que ser pequeño y estable. El detalle, que se necesita de vez en cuando, se guarda aparte y se trae bajo demanda. Un núcleo caliente y corto, más un archivo frío al que se apunta.
+La idea de fondo es sencilla. Lo que se carga siempre tiene que ser pequeño y estable. El detalle, que se necesita de vez en cuando, se guarda aparte y se trae bajo demanda.
 
-Encima va una regla que evita el fallo más común: una sola fuente de verdad. Dos ficheros que dicen lo mismo son dos sitios donde corregir, y tarde o temprano uno queda desfasado. Por eso, al descargar peso, se mueve el contenido entero y se deja un puntero. Nunca se copia.
+Encima va una regla que evita el fallo más común: una sola fuente de verdad. Dos ficheros que dicen lo mismo son dos sitios donde corregir, y tarde o temprano uno queda desfasado. Por eso, al descargar peso, el contenido se mueve entero y se deja un puntero en su lugar; no se copia.
 
 ## Repos relacionados
 
-Este repo no es una isla. Cuenta una pieza de un sistema más grande:
+Este repo cuenta una pieza de un sistema más grande:
 
-- **[agent-memory-governance](https://github.com/jleonceo/agent-memory-governance)**: la pieza hermana. Aquel gobierna la calidad de lo que se recuerda, que el corpus de memoria no se pudra, con linter, logs y citas re-ejecutables. Este gobierna el presupuesto de carga de los ficheros de contexto. Uno cuida *qué* se recuerda. El otro, *cuánto de eso entra* cada sesión.
+- **[agent-memory-governance](https://github.com/jleonceo/agent-memory-governance)**: la pieza hermana. Aquel gobierna la calidad de lo que se recuerda, que el corpus de memoria no se pudra, con linter, logs y citas re-ejecutables. Este gobierna el presupuesto de carga: cuánto de esa memoria llega al contexto en cada sesión.
 - **[verificacion-determinista-ia](https://github.com/jleonceo/verificacion-determinista-ia)**: código que recomprueba la coherencia del estado sin IA.
 - **[gobernanza-skills-analiticas](https://github.com/jleonceo/gobernanza-skills-analiticas)**: golden sets, puertas de no-regresión, autonomía por riesgo.
 

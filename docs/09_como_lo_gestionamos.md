@@ -1,6 +1,6 @@
 # 09. Cómo lo gestionamos, paso a paso
 
-La teoría está en los otros documentos. Este es el protocolo práctico, el que seguimos cuando toca tocar un fichero de contexto. Es lo que hemos probado en un proyecto real.
+La teoría está en los otros documentos. Este es el protocolo práctico, el que seguimos cuando hay que tocar un fichero de contexto. Es lo que hemos probado en un proyecto real.
 
 ## 1. Copia de seguridad antes de tocar
 
@@ -8,7 +8,7 @@ Antes de editar el `CLAUDE.md` o el `MEMORY.md`, una copia con fecha. Estos fich
 
 ## 2. Medir en vivo, con dos métodos
 
-El tamaño se mide en el momento, no se cita de memoria. Una cifra escrita a mano ("el fichero tiene 150 líneas") caduca en cuanto editas. Y se mide con dos métodos que coincidan, no con uno solo, porque un método determinista puede estar mal y darte una cifra falsa con cara de exacta. Dos que convergen dan confianza; uno solo, no.
+El tamaño se mide en el momento, no se cita de memoria. Una cifra escrita a mano ("el fichero tiene 150 líneas") caduca en cuanto editas. Y se mide con dos métodos que coincidan, no con uno solo, porque un método determinista puede estar mal y darte una cifra falsa con cara de exacta. Si los dos convergen, la cifra es de fiar.
 
 ## 3. Mover entero, dejar puntero, verificar cero pérdidas
 
@@ -16,9 +16,9 @@ Cuando un bloque sale del núcleo, sale **entero** a su fichero de detalle, y en
 
 ## 4. Qué se queda en el núcleo y qué puede salir
 
-En el núcleo caliente se queda lo que el asistente **no puede descubrir solo** y necesita en cada sesión: la forma de trabajar, las reglas permanentes, los avisos que evitan errores caros (un nombre de campo que si te equivocas rompe algo). Fuera de él van los inventarios, las tablas largas, los procedimientos de varios pasos y todo lo que ya está autogenerado en otro sitio. La decisión se toma bloque a bloque, no de golpe.
+En el núcleo se queda lo que el asistente **no puede descubrir solo** y necesita en cada sesión: la forma de trabajar, las reglas permanentes, los avisos que evitan errores caros (un nombre de campo que si te equivocas rompe algo). Fuera de él van los inventarios, las tablas largas, los procedimientos de varios pasos y todo lo que ya está autogenerado en otro sitio. La decisión se toma bloque a bloque, no de golpe.
 
-## 5. Un guardián, no una promesa
+## 5. El guardián que vigila por ti
 
 La disciplina no basta, porque los ficheros se pudren en silencio: uno se queda desfasado y se sigue obedeciendo. Contra eso, un mecanismo que lo compruebe solo. Un guardián que mida el tamaño y avise si se pasa del límite. Un chequeo que cace un inventario que se ha quedado atrás respecto a su fuente autogenerada. El objetivo es que el sistema se ponga en rojo por su cuenta, no que alguien se acuerde de mirar.
 

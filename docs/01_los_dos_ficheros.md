@@ -1,16 +1,16 @@
 # 01. Los dos ficheros
 
-Claude Code arranca cada sesión sin memoria. La ventana de contexto está vacía. Para que no empiece de cero cada vez, Anthropic tiene dos mecanismos, y los dos se cargan al principio de cada conversación.
+Claude Code arranca cada sesión sin memoria. La ventana de contexto está vacía. Para que no empiece de cero cada vez, Anthropic tiene dos mecanismos, y los dos se cargan al principio de la conversación.
 
 ## `CLAUDE.md`: lo que escribes tú
 
-Es un fichero de texto (markdown) con las instrucciones que le das al asistente sobre el proyecto. Lo escribes tú, a mano. Anthropic dice que ahí van los estándares de código, la arquitectura, las convenciones, los comandos de build y de test, y los flujos de trabajo habituales. Es lo que le explicarías a alguien que entra nuevo al proyecto y tendrías que repetir cada vez.
+Es un fichero de texto (markdown) con las instrucciones que le das al asistente sobre el proyecto. Lo redactas tú. Anthropic dice que ahí van los estándares de código, la arquitectura, las convenciones, los comandos de build y de test, y los flujos de trabajo habituales. Es lo que le explicarías a alguien que entra nuevo al proyecto y tendrías que repetir cada vez.
 
-Se carga **entero** al arranque, mida lo que mida. Puede vivir en varios sitios, con distinto alcance: en el proyecto (`./CLAUDE.md`, compartido con el equipo por control de versiones), en tu usuario (`~/.claude/CLAUDE.md`, tus preferencias para todos los proyectos), en local sin compartir (`CLAUDE.local.md`), o gestionado por la organización (política de empresa, que no se puede anular).
+Se carga **entero** al iniciar la sesión, mida lo que mida. Puede vivir en varios sitios, con distinto alcance: en el proyecto (`./CLAUDE.md`, compartido con el equipo por control de versiones), en tu usuario (`~/.claude/CLAUDE.md`, tus preferencias para todos los proyectos), en local sin compartir (`CLAUDE.local.md`), o gestionado por la organización (política de empresa, que no se puede anular).
 
 ## `MEMORY.md`: lo que el asistente se guarda solo
 
-Es la auto-memoria. Aquí no escribes tú: escribe Claude. Va anotando lo que aprende de tus correcciones y preferencias, como comandos de build, hallazgos de depuración o cómo te gusta que trabaje. Él decide qué merece la pena recordar. No guarda algo en cada sesión.
+Es la auto-memoria. Aquí no escribes tú: escribe Claude. Va anotando lo que aprende de tus correcciones y preferencias, como comandos de build, hallazgos de depuración o cómo te gusta que trabaje. Él decide qué merece la pena recordar. Hay sesiones en las que no guarda nada.
 
 `MEMORY.md` es el índice de esa memoria. A su lado viven ficheros por tema (por ejemplo `debugging.md`), que Claude lee bajo demanda cuando los necesita. El índice se carga cada sesión, pero solo en parte, y eso tiene su regla propia (ver [02](02_tamano_y_limites.md)).
 
@@ -22,7 +22,7 @@ Esto tiene una consecuencia práctica que mucha gente pasa por alto: si necesita
 
 ## Cuándo usar cada uno
 
-Usa `CLAUDE.md` cuando quieras **guiar** el comportamiento: convenciones, arquitectura, "haz siempre X". Deja que la auto-memoria capture lo que Claude **descubre** trabajando contigo, sin que tengas que escribirlo. Uno es intención tuya; el otro, aprendizaje suyo.
+Usa `CLAUDE.md` cuando quieras **guiar** el comportamiento: convenciones, arquitectura, "haz siempre X". Deja que la auto-memoria capture lo que Claude **descubre** trabajando contigo, sin que tengas que escribirlo.
 
 
 *Verificado contra la documentación oficial de Anthropic (Claude Code, Memory) el 16/07/2026: <https://code.claude.com/docs/en/memory>. Esto puede cambiar. A día de hoy, así funciona.*

@@ -4,15 +4,15 @@ Hay una tentación lógica cuando el `CLAUDE.md` crece: partirlo en trozos y tra
 
 ## Qué es `@import`
 
-Es una sintaxis oficial. Dentro del `CLAUDE.md` escribes `@ruta/al/fichero` y Claude Code trae ese fichero. Admite rutas relativas y absolutas, y los ficheros importados pueden importar otros, hasta un máximo de cuatro saltos. Para mencionar una ruta sin importarla, se envuelve en acentos graves.
+Es una sintaxis oficial. Dentro del `CLAUDE.md` escribes `@ruta/al/fichero` y Claude Code trae ese fichero. Admite rutas relativas y absolutas, y los ficheros importados pueden importar otros, hasta un máximo de cuatro saltos. Para mencionar una ruta sin importarla, se escribe entre acentos graves (`` ` ``).
 
 ## Por qué NO ahorra contexto
 
-Aquí está el punto, y lo dice Anthropic con todas las letras: *"Imported files are expanded and loaded into context at launch alongside the CLAUDE.md that references them."* Es decir, el fichero importado **se expande y se carga en el contexto al arrancar**, igual que si lo hubieras escrito dentro del `CLAUDE.md`.
+Lo dice Anthropic con todas las letras: *"Imported files are expanded and loaded into context at launch alongside the CLAUDE.md that references them."* Es decir, el fichero importado **se expande y se carga en el contexto al arrancar**, igual que si lo hubieras escrito dentro del `CLAUDE.md`.
 
-Y por si queda duda, la propia doc lo repite en el apartado de ficheros grandes: *"Splitting into @path imports helps organization but doesn't reduce context, since imported files load at launch."* Partir con `@import` ayuda a organizar, pero **no reduce el contexto**, porque los importados cargan al arranque.
+Y por si queda alguna duda, la propia doc lo repite en el apartado de ficheros grandes: *"Splitting into @path imports helps organization but doesn't reduce context, since imported files load at launch."* Partir con `@import` ayuda a organizar, pero **no reduce el contexto**, porque los importados cargan al arranque.
 
-O sea, `@import` reordena, no adelgaza. Mueves texto de un fichero a otro, pero el total que se carga es el mismo.
+O sea, `@import` mueve texto de un fichero a otro, pero el total que se carga sigue siendo el mismo.
 
 ## Cuándo sí sirve
 
