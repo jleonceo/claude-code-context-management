@@ -1,0 +1,21 @@
+# Secretos y entorno (nunca al repo)
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+secrets/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores / IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# Configuración local del asistente
+.claude/
