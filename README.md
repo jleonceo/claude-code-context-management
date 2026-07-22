@@ -144,6 +144,6 @@ This repo is not an island. It tells one piece of a larger system:
 
 - Anthropic official documentation, Claude Code, *Memory*: <https://code.claude.com/docs/en/memory> (accessed 16/07/2026).
 
-Everything marked official comes from there, with its literal quote. The rest is our convention, and it is labeled as such.
+Everything marked official comes from there, with its literal quote. The rest is our convention, labeled as such.
 
 *Bilingual README. Licencia MIT / MIT License.*
