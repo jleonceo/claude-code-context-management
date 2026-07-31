@@ -8,17 +8,17 @@ Lo primero, un dato oficial: Claude Code solo autocarga `CLAUDE.md`, `CLAUDE.loc
 
 Importado con `@context.md`. Pero un import carga al arranque y no ahorra contexto (ver [04](04_import_descartado.md)). Solo reordena.
 
-Apuntado con un puntero blando, para leerlo bajo demanda. Pero entonces esos hechos no están al arrancar, y además choca con el punto siguiente.
+Apuntado con un puntero blando, para leerlo bajo demanda. Pero entonces esos hechos no están al arrancar y además choca con el punto siguiente.
 
 ## La trampa de la segunda fuente de verdad
 
-Si ya tienes un fichero de detalle bajo demanda (nuestro puntero blando del [03](03_punteros_y_secundarios.md)), crear un `context.md` **al lado** te deja dos ficheros con el mismo papel: los dos son "el detalle que se lee cuando hace falta". Eso es una segunda fuente de verdad. Dos sitios que hablan de lo mismo, que hay que mantener a la vez, y que un día se contradicen. Es justo el fallo que la regla de una sola fuente de verdad existe para evitar.
+Si ya tienes un fichero de detalle bajo demanda (nuestro puntero blando del [03](03_punteros_y_secundarios.md)), crear un `context.md` **al lado** te deja dos ficheros con el mismo papel: los dos son "el detalle que se lee cuando hace falta". Eso es una segunda fuente de verdad. Dos sitios que hablan de lo mismo, que hay que mantener a la vez y que un día se contradicen. Es justo el fallo que la regla de una sola fuente de verdad existe para evitar.
 
 ## Lo que dice el sector
 
 La idea de separar contexto-de-proyecto de instrucciones-al-agente es buena. No somos los únicos que la vemos: la comunidad coincide en el **concepto**. Lo que no hay es un nombre estándar ni herramientas que lo carguen. El estándar de facto entre herramientas es otro fichero, `AGENTS.md`, que Claude Code no lee de forma nativa (se trae con `@AGENTS.md`). Un `context.md` a medida es convención suelta, sin nadie detrás que lo autocargue.
 
-Y hay evidencia de que un fichero de contexto mal planteado puede hacer daño. Un estudio académico sobre cientos de tareas midió que un fichero de contexto escrito por un humano daba una mejora marginal, uno generado por un modelo empeoraba el resultado, y ambos subían el coste en torno a un 20%. La causa: **duplican** lo que ya está en el código, y un fichero desactualizado se obedece a ciegas. Añadir ficheros, por sí solo, no ayuda.
+Y hay evidencia de que un fichero de contexto mal planteado puede hacer daño. Un estudio académico sobre cientos de tareas midió que un fichero de contexto escrito por un humano daba una mejora marginal, uno generado por un modelo empeoraba el resultado, y ambos subían el coste en torno a un 20%. La causa: **duplican** lo que ya está en el código. Un fichero desactualizado se obedece a ciegas. Añadir ficheros, por sí solo, no ayuda.
 
 ## La decisión
 

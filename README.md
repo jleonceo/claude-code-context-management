@@ -8,7 +8,7 @@ por un lado y la convención propia por otro, siempre separadas.**
 [Español](#español) · [English](#english)
 
 > **Vigencia.** Verificado contra la documentación oficial de Anthropic el **16 de julio de
-> 2026**, y revisado el 22 de julio. Esto puede cambiar: Claude Code evoluciona rápido, y este
+> 2026** y revisado el 22 de julio. Esto puede cambiar: Claude Code evoluciona rápido, y este
 > mismo documento tiene abajo un apartado con lo que se le ha caducado en seis días.
 
 ---
@@ -88,7 +88,7 @@ líneas". Hoy son 200. La cifra era cierta el día que se escribió y envejeció
 propio repositorio predicaba medir en vivo en lugar de citar de memoria.
 
 Queda escrito aquí porque es la mejor demostración de la tesis. Una cifra escrita a mano en un
-fichero de contexto caduca en cuanto alguien edita el fichero, y nada avisa.
+fichero de contexto caduca en cuanto alguien edita el fichero y nada avisa.
 
 ### Los conceptos
 
@@ -97,7 +97,7 @@ documentación oficial es tajante: *"Claude treats them as context, not enforced
 Si necesitas que algo se cumpla pase lo que pase, un fichero de contexto no sirve.
 
 **El truncado.** **Truncar** es cortar por lo sano lo que no cabe. Del `MEMORY.md` entran las
-primeras 200 líneas o los primeros 25 KB, y el resto se queda fuera. Hasta hace poco nada marcaba
+primeras 200 líneas o los primeros 25 KB y el resto se queda fuera. Hasta hace poco nada marcaba
 lo que quedaba fuera, de ahí la insistencia del repositorio en dejar un colchón por debajo del
 límite en vez de rozarlo. Ese punto ha cambiado. Está contado en el apartado de más abajo.
 
@@ -108,7 +108,7 @@ lee todos los días.
 **Una sola fuente de verdad.** Cuando un bloque sale del fichero principal, sale entero y en su
 sitio queda el puntero. Nunca se copia. Quien haya llevado dos versiones del mismo contrato
 reconoce el motivo: dos ficheros que dicen lo mismo son dos sitios donde corregir, corriges uno,
-te olvidas del otro, y acabas con dos textos que se contradicen sin que el asistente sepa cuál
+te olvidas del otro y acabas con dos textos que se contradicen sin que el asistente sepa cuál
 vale. A veces obedece al viejo.
 
 **Intención frente a mecanismo.** Escribir "hay que mantener estos ficheros cortos" es una
@@ -152,7 +152,7 @@ marca los límites y da las vías; la disciplina de encima la ponemos nosotros.
 | Tamaño de `CLAUDE.md` | Objetivo *"under 200 lines"*. Se carga entero, mida lo que mida. | El objetivo de 200 se mide en vivo con dos métodos que coincidan. |
 | Tamaño de `MEMORY.md` | Se cargan las *"first 200 lines or 25KB, whichever comes first"*. Lo que exceda, no. | Un colchón por debajo del límite, para no rozarlo. |
 | `@import` | Los ficheros importados *"still load and enter the context window at launch"*. No ahorra contexto. | Regla: nunca `@import` para aligerar peso. Solo organiza. |
-| Ficheros secundarios | Los ficheros de tema (tipo `debugging.md`) *"are not loaded at startup. Claude reads them on demand"*. Vías oficiales para descargar el `CLAUDE.md`: `.claude/rules/` con `paths`, y skills. | Un puntero blando a un fichero de detalle, como alternativa. |
+| Ficheros secundarios | Los ficheros de tema (tipo `debugging.md`) *"are not loaded at startup. Claude reads them on demand"*. Vías oficiales para descargar el `CLAUDE.md`: `.claude/rules/` con `paths` y skills. | Un puntero blando a un fichero de detalle, como alternativa. |
 | Un tercer fichero a medida | Solo se autocargan `CLAUDE.md`, `CLAUDE.local.md`, `.claude/rules/` y `MEMORY.md`. Un `context.md` inventado no se cargaría. | Lo estudiamos y lo descartamos. Está contado en `docs/`. |
 
 ### Qué hay en este repositorio
@@ -165,7 +165,7 @@ Once documentos con su licencia, sin un solo programa que arrancar.
 - **[04. `@import` descartado](docs/04_import_descartado.md)**: qué es `@import`, cuándo sirve y por qué no lo usamos para aligerar.
 - **[05. Por qué no un tercer fichero](docs/05_por_que_no_un_tercer_fichero.md)**: por qué descartamos crear un `context.md`.
 - **[06. Todas las vías oficiales](docs/06_vias_oficiales_completas.md)**: todas las vías oficiales, no solo las que usamos.
-- **[07. El hook](docs/07_hooks.md)**: el hook como mecanismo relacionado, y su utilidad para este problema, sopesada.
+- **[07. El hook](docs/07_hooks.md)**: el hook como mecanismo relacionado y su utilidad para este problema, sopesada.
 - **[08. Por qué funciona](docs/08_por_que_funciona.md)**: la teoría, por qué esta arquitectura funciona.
 - **[09. Cómo lo gestionamos](docs/09_como_lo_gestionamos.md)**: el protocolo práctico, paso a paso.
 
@@ -248,7 +248,7 @@ Este repositorio cuenta una pieza de un sistema más grande:
   Files Helpful for Coding Agents?*, Escuela Politécnica Federal de Zúrich.
 
 Toda afirmación marcada como oficial sale de la primera, con su cita literal. Lo demás es
-convención nuestra, y aparece señalado como tal en el sitio donde se afirma.
+convención nuestra y aparece señalado como tal en el sitio donde se afirma.
 
 ---
 

@@ -1,6 +1,6 @@
 # 03. Punteros y ficheros secundarios
 
-Ya sabemos el problema: lo que se carga siempre ocupa contexto, y si crece, rinde peor. La solución se dice pronto, aunque aplicarla no sea tan simple: sacar el detalle del fichero que se carga siempre y llevarlo a otro que solo se lea cuando haga falta.
+Ya sabemos el problema: lo que se carga siempre ocupa contexto y, si crece, rinde peor. La solución se dice pronto, aunque aplicarla no sea tan simple: sacar el detalle del fichero que se carga siempre y llevarlo a otro que solo se lea cuando haga falta.
 
 ## Lo que se carga bajo demanda (oficial)
 

@@ -4,7 +4,7 @@ Claude Code arranca cada sesión sin memoria. La ventana de contexto está vací
 
 ## `CLAUDE.md`: lo que escribes tú
 
-Es un fichero de texto (markdown) con las instrucciones que le das al asistente sobre el proyecto. Lo redactas tú. Anthropic dice que ahí van los estándares de código, la arquitectura, las convenciones, los comandos de build y de test, y los flujos de trabajo habituales. Es lo que le explicarías a alguien que entra nuevo al proyecto y tendrías que repetir cada vez.
+Es un fichero de texto (markdown) con las instrucciones que le das al asistente sobre el proyecto. Lo redactas tú. Anthropic dice que ahí van los estándares de código, la arquitectura, las convenciones, los flujos de trabajo habituales y los comandos de build y de test. Es lo que le explicarías a alguien que entra nuevo al proyecto y tendrías que repetir cada vez.
 
 Se carga **entero** al iniciar la sesión, mida lo que mida. Puede vivir en varios sitios, con distinto alcance: en el proyecto (`./CLAUDE.md`, compartido con el equipo por control de versiones), en tu usuario (`~/.claude/CLAUDE.md`, tus preferencias para todos los proyectos), en local sin compartir (`CLAUDE.local.md`), o gestionado por la organización (política de empresa, que no se puede anular).
 

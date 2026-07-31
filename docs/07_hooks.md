@@ -16,7 +16,7 @@ La doc menciona uno útil para este tema: el hook `InstructionsLoaded`, que regi
 
 Aquí va el juicio honesto. El problema de este repo es que los ficheros no engorden. ¿Encaja un hook? Sí, como **guardarraíl**: un hook que mida el `CLAUDE.md` y el `MEMORY.md` y avise (o falle) si pasan del límite convierte una buena intención ("hay que mantenerlos cortos") en un mecanismo que se cumple solo. Eso es exactamente pasar de intención a mecanismo, que es lo que buscamos.
 
-Pero con un matiz que hemos aprendido a base de tropezar: **un hook da falsa confianza**. Cubre una puerta, no todo el recurso. Un guardián que vigila el tamaño no garantiza que el contenido sea bueno, ni que no haya duplicados, ni que un fichero esté al día. Hace una cosa concreta, y solo esa. El trabajo de fondo (qué se queda, qué se mueve, qué se borra) sigue siendo criterio, no automatismo.
+Pero con un matiz que hemos aprendido a base de tropezar: **un hook da falsa confianza**. Cubre una puerta, no todo el recurso. Un guardián que vigila el tamaño no garantiza que el contenido sea bueno, ni que no haya duplicados, ni que un fichero esté al día. Hace una cosa concreta y solo esa. El trabajo de fondo (qué se queda, qué se mueve, qué se borra) sigue siendo criterio, no automatismo.
 
 ## El veredicto
 

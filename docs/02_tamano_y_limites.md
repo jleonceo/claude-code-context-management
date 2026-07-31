@@ -6,7 +6,7 @@ Aquí están las cifras. Unas son de Anthropic; otras, convención nuestra.
 
 La documentación oficial marca el objetivo con estas palabras: *"target under 200 lines per CLAUDE.md file. Longer files consume more context and reduce adherence."* Traducido: apunta a menos de 200 líneas por fichero, porque los ficheros más largos consumen más contexto y hacen que el asistente se adhiera menos a lo que dicen.
 
-Dos matices importantes, y honestos:
+Dos matices importantes y honestos:
 
 Primero, el `CLAUDE.md` se carga **entero**, sea cual sea su longitud. No se trunca. Un `CLAUDE.md` de 500 líneas se carga completo; lo que pasa es que se sigue peor y ocupa más sitio.
 
@@ -16,7 +16,7 @@ Segundo, 200 es un **objetivo, no un acantilado**. No hay una cifra a partir de 
 
 Con la auto-memoria la regla es distinta, y aquí sí hay corte. La doc oficial: se cargan las *"first 200 lines or 25KB, whichever comes first"*. Lo que pase de ese umbral **no se carga** al arrancar la sesión. Y no hay ningún aviso de que se ha quedado fuera.
 
-Por eso `MEMORY.md` es un índice, no un almacén. El detalle vive en ficheros por tema que se leen bajo demanda, y el índice se mantiene corto para que entre entero.
+Por eso `MEMORY.md` es un índice, no un almacén. El detalle vive en ficheros por tema que se leen bajo demanda y el índice se mantiene corto para que entre entero.
 
 ## Por qué importa el tamaño
 

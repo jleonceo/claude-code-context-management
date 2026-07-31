@@ -1,10 +1,10 @@
 # 04. `@import`: por qué no lo usamos para aligerar
 
-Hay una tentación lógica cuando el `CLAUDE.md` crece: partirlo en trozos y traerlos con `@import`. Parece que así aligeras. No es así, y conviene entender por qué.
+Hay una tentación lógica cuando el `CLAUDE.md` crece: partirlo en trozos y traerlos con `@import`. Parece que así aligeras. No es así. Conviene entender por qué.
 
 ## Qué es `@import`
 
-Es una sintaxis oficial. Dentro del `CLAUDE.md` escribes `@ruta/al/fichero` y Claude Code trae ese fichero. Admite rutas relativas y absolutas, y los ficheros importados pueden importar otros, hasta un máximo de cuatro saltos. Para mencionar una ruta sin importarla, se escribe entre acentos graves (`` ` ``).
+Es una sintaxis oficial. Dentro del `CLAUDE.md` escribes `@ruta/al/fichero` y Claude Code trae ese fichero. Admite rutas relativas y absolutas. Los ficheros importados pueden importar otros, hasta un máximo de cuatro saltos. Para mencionar una ruta sin importarla, se escribe entre acentos graves (`` ` ``).
 
 ## Por qué NO ahorra contexto
 
