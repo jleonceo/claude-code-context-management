@@ -1,6 +1,6 @@
 # 06. Todas las vías oficiales
 
-Hasta aquí hemos usado unas pocas. Pero Anthropic ofrece más mecanismos para organizar y aligerar el contexto, y conviene tenerlos todos a la vista, aunque no uses todos. Esta es la lista, con cuándo sirve cada uno.
+Hasta aquí hemos usado unas pocas. Anthropic ofrece más mecanismos para organizar y aligerar el contexto. Conviene tenerlos todos a la vista, aunque no uses todos. Esta es la lista, con cuándo sirve cada uno.
 
 ## Reglas con alcance (`.claude/rules/`)
 
@@ -16,7 +16,7 @@ Una empresa puede desplegar un `CLAUDE.md` central que se aplica a todas las má
 
 ## Excluir ficheros ajenos (`claudeMdExcludes`)
 
-En un monorepo, los `CLAUDE.md` de otros equipos por encima de tu carpeta se cargan también, y puede que no te interesen. Con `claudeMdExcludes` en la configuración saltas ficheros por ruta o patrón. Menos ruido, menos contexto gastado en instrucciones que no son tuyas.
+En un monorepo, los `CLAUDE.md` de otros equipos por encima de tu carpeta se cargan también. Puede que no te interesen. Con `claudeMdExcludes` en la configuración saltas ficheros por ruta o patrón: menos ruido y menos contexto gastado en instrucciones que no son tuyas.
 
 ## Comentarios HTML que no gastan contexto
 

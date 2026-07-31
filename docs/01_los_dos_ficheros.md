@@ -12,11 +12,11 @@ Se carga **entero** al iniciar la sesión, mida lo que mida. Puede vivir en vari
 
 Es la auto-memoria. Aquí no escribes tú: escribe Claude. Va anotando lo que aprende de tus correcciones y preferencias, como comandos de build, hallazgos de depuración o cómo te gusta que trabaje. Él decide qué merece la pena recordar. Hay sesiones en las que no guarda nada.
 
-`MEMORY.md` es el índice de esa memoria. A su lado viven ficheros por tema (por ejemplo `debugging.md`), que Claude lee bajo demanda cuando los necesita. El índice se carga cada sesión, pero solo en parte, y eso tiene su regla propia (ver [02](02_tamano_y_limites.md)).
+`MEMORY.md` es el índice de esa memoria. A su lado viven ficheros por tema (por ejemplo `debugging.md`), que Claude lee bajo demanda cuando los necesita. El índice se carga cada sesión, pero solo en parte. Esa parte tiene regla propia (ver [02](02_tamano_y_limites.md)).
 
-## La diferencia que importa: guía, no orden
+## Guían pero no obligan
 
-Los dos son **contexto**, no configuración que se imponga. En palabras de Anthropic: *"Both are loaded at the start of every conversation. Claude treats them as context, not enforced configuration."* O sea, el asistente los lee y trata de seguirlos, pero no hay garantía de cumplimiento estricto, sobre todo si una instrucción es vaga o se contradice con otra.
+Los dos son **contexto** en vez de configuración que se imponga. En palabras de Anthropic: *"Both are loaded at the start of every conversation. Claude treats them as context, not enforced configuration."* O sea: el asistente los lee y trata de seguirlos. Garantía de cumplimiento estricto no hay. Menos aún cuando una instrucción es vaga o se contradice con otra.
 
 Esto tiene una consecuencia práctica que mucha gente pasa por alto: si necesitas que algo se cumpla pase lo que pase (bloquear un comando, impedir tocar un fichero), un fichero de contexto no es la herramienta. Para eso está el hook, que se ejecuta como código. Lo vemos en [07](07_hooks.md).
 

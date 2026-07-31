@@ -1,10 +1,10 @@
-# 07. El hook, y su utilidad para este problema
+# 07. El hook y su utilidad para este problema
 
 Un hook no es exactamente parte de la gestión de los ficheros de contexto, pero está tan cerca que dejarlo fuera sería un hueco. Lo metemos aquí, sopesando si sirve para este problema o no.
 
 ## La distinción que hay que entender
 
-Ya lo dijimos en [01](01_los_dos_ficheros.md): el `CLAUDE.md` y la memoria son **guía**, no imposición. El asistente los lee y trata de seguirlos, pero no hay garantía. Anthropic es explícito: *"To block an action regardless of what Claude decides, use a PreToolUse hook instead."* Para bloquear una acción, decida lo que decida el asistente, se usa un hook, no una instrucción en el `CLAUDE.md`.
+Ya lo dijimos en [01](01_los_dos_ficheros.md): el `CLAUDE.md` y la memoria son **guía**, no imposición. El asistente los lee y trata de seguirlos, pero no hay garantía. Anthropic es explícito: *"To block an action regardless of what Claude decides, use a PreToolUse hook instead."* Para bloquear una acción, decida lo que decida el asistente, se usa un hook en vez de una instrucción en el `CLAUDE.md`.
 
 Un hook es código que se ejecuta en un momento fijo del ciclo (antes de una herramienta, al terminar), y se cumple decida lo que decida el modelo. La diferencia es esa: la instrucción es intención, el hook es mecanismo.
 
@@ -20,7 +20,7 @@ Pero con un matiz que hemos aprendido a base de tropezar: **un hook da falsa con
 
 ## El veredicto
 
-Un hook vale como **segunda capa**: un vigilante barato que caza el desbordamiento de tamaño y te avisa. No sustituye la disciplina de decidir qué va en cada fichero; eso sigue siendo criterio tuyo. Pídele lo que sabe hacer, cumplir una regla mecánica, y nada más.
+Un hook vale como **segunda capa**: un vigilante barato que caza el desbordamiento de tamaño y te avisa. No sustituye la disciplina de decidir qué va en cada fichero; eso sigue siendo criterio tuyo. Pídele lo que sabe hacer: cumplir una regla mecánica. Nada más.
 
 
 *Verificado contra la documentación oficial de Anthropic (Claude Code, Memory y Hooks) el 16/07/2026: <https://code.claude.com/docs/en/memory>. Esto puede cambiar. A día de hoy, así encaja el hook.*

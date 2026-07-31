@@ -10,11 +10,11 @@ Lo que se carga siempre tiene que ser pequeño y estable. El detalle, que se nec
 
 ## Una sola fuente de verdad
 
-Encima de eso va la regla que sostiene todo lo demás: cada cosa vive en un solo sitio. Dos ficheros que dicen lo mismo son dos sitios donde corregir. Corriges uno, te olvidas del otro, y acabas con dos versiones que se contradicen. El asistente no sabe cuál vale, y a veces obedece la vieja sin darse cuenta. Por eso, al descargar peso, se mueve entero y se deja un puntero en su lugar; no se copia.
+Encima de eso va la regla que sostiene todo lo demás: cada cosa vive en un solo sitio. Dos ficheros que dicen lo mismo son dos sitios donde corregir. Corriges uno, te olvidas del otro y acabas con dos versiones que se contradicen. El asistente no sabe cuál vale. A veces obedece la vieja sin darse cuenta. Por eso, al descargar peso, se mueve entero y se deja un puntero en su lugar; no se copia.
 
-## La evidencia, en las dos direcciones
+## La evidencia en las dos direcciones
 
-Aquí toca ser honesto, porque hay evidencia a favor y en contra, y las dos importan.
+Aquí toca ser honesto: hay evidencia a favor y en contra. Las dos importan.
 
 Un estudio académico sobre cientos de tareas (con varias herramientas, Claude Code entre ellas) midió el efecto de tener un fichero de contexto. El resultado incomoda: un fichero escrito por un humano daba una mejora marginal, uno generado por un modelo **empeoraba** el resultado, y ambos subían el coste en torno a un 20%. Es decir, un fichero de contexto no es gratis ni es bueno por defecto.
 
@@ -22,11 +22,11 @@ El mismo estudio dice cuándo sí ayuda y cuándo no. Los **resúmenes e inventa
 
 ## Qué sacamos de esto
 
-La arquitectura funciona porque **carga menos y mejor**, no por multiplicar ficheros. Concretando:
+Lo que hace funcionar esta arquitectura es que **carga menos y mejor**. Multiplicar ficheros no es lo que la sostiene. Concretando:
 
 Se queda en el núcleo solo lo que el asistente **no puede descubrir solo**. Los inventarios que ya están autogenerados en otro sitio se van, porque leerlos es coste sin ganancia.
 
-El fallo más citado de estos ficheros es que **se quedan desfasados y se obedecen a ciegas**: el modelo no nota que una instrucción ya no vale. Contra eso, la defensa buena no es la disciplina ("me acordaré de actualizarlo"), sino un **mecanismo** que lo compruebe solo. Un fichero al día es un fichero que un guardián vigila, no uno que prometes revisar.
+El fallo más citado de estos ficheros es que **se quedan desfasados y se obedecen a ciegas**: el modelo no nota que una instrucción ya no vale. Contra eso, la defensa buena es un **mecanismo** que lo compruebe solo. La disciplina ("me acordaré de actualizarlo") se queda corta. Un fichero al día es un fichero que un guardián vigila, en vez de uno que prometes revisar.
 
 Esa es la razón última de que funcione: mantiene el núcleo pequeño y guarda solo lo que aporta. Y para no pudrirse, no se fía de la buena voluntad: pone un guardián.
 
