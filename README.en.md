@@ -69,6 +69,19 @@ check earns its keep: a fifth way of counting returned 153, because it was count
 (lines with text on them, skipping the blank ones). Two methods are worth having when they count
 the same thing.
 
+```mermaid
+flowchart TD
+    S[New session] --> CL[CLAUDE.md<br/>loaded in full]
+    S --> ME[MEMORY.md<br/>200 lines or 25 KB]
+    CL & ME --> V[Context window<br/>what they take is lost for the work]
+    CL --> P{Needed in every session?}
+    P -->|No| F[Moved whole to a file<br/>opened on demand]
+    F --> PB[A soft pointer stays in its place<br/>a single line]
+    P -->|Yes| Q[It stays]
+    style P fill:#e3f2fd,stroke:#1565c0,color:#0d47a1
+    style PB fill:#e8f5e9,stroke:#2e7d32,color:#1b5e20
+```
+
 ### Why we measure live instead of quoting from memory
 
 The previous version of this front page said that `CLAUDE.md` had been brought "below 150 lines".

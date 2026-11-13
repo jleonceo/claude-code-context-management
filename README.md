@@ -77,6 +77,19 @@ La comprobación no sobra: una quinta forma de contar devolvió 153, porque esta
 cosa (las líneas con texto, saltándose las vacías). Dos métodos solo sirven de comprobación
 cuando los dos cuentan exactamente lo mismo.
 
+```mermaid
+flowchart TD
+    S[Sesión nueva] --> CL[CLAUDE.md<br/>se carga entero]
+    S --> ME[MEMORY.md<br/>200 líneas o 25 KB]
+    CL & ME --> V[Ventana de contexto<br/>lo que ocupan no queda para el trabajo]
+    CL --> P{¿Hace falta en todas las sesiones?}
+    P -->|No| F[Se mueve entero a un fichero<br/>que se abre bajo demanda]
+    F --> PB[En su sitio queda un puntero blando<br/>una sola línea]
+    P -->|Sí| Q[Se queda]
+    style P fill:#e3f2fd,stroke:#1565c0,color:#0d47a1
+    style PB fill:#e8f5e9,stroke:#2e7d32,color:#1b5e20
+```
+
 ### Por qué se mide en vivo y no de memoria
 
 La versión anterior de esta portada decía que ese `CLAUDE.md` se había dejado "por debajo de 150
