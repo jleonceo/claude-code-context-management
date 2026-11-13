@@ -18,7 +18,7 @@ Es la auto-memoria. Aquí no escribes tú: escribe Claude. Va anotando lo que ap
 
 Los dos son **contexto** en vez de configuración que se imponga. En palabras de Anthropic: *"Both are loaded at the start of every conversation. Claude treats them as context, not enforced configuration."* O sea: el asistente los lee y trata de seguirlos. Garantía de cumplimiento estricto no hay. Menos aún cuando una instrucción es vaga o se contradice con otra.
 
-Esto tiene una consecuencia práctica que mucha gente pasa por alto: si necesitas que algo se cumpla pase lo que pase (bloquear un comando, impedir tocar un fichero), un fichero de contexto no es la herramienta. Para eso está el hook, que se ejecuta como código. Lo vemos en [07](07_hooks.md).
+Esto tiene una consecuencia práctica: si necesitas que algo se cumpla pase lo que pase (bloquear un comando, impedir tocar un fichero), un fichero de contexto no es la herramienta. Para eso está el hook, que se ejecuta como código. Lo vemos en [07](07_hooks.md).
 
 ## Cuándo usar cada uno
 

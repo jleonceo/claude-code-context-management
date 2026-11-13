@@ -20,7 +20,7 @@ No es la única forma. Las reglas con alcance y las skills son las vías oficial
 
 ## Mover entero y nunca copiar
 
-Aquí está el truco, y es una regla dura: al descargar peso, se **mueve el contenido entero** y se deja un puntero. **Nunca se copia.**
+Aquí está el truco, y es una regla estricta: al descargar peso, se **mueve el contenido entero** y se deja un puntero. **Nunca se copia.**
 
 ¿Por qué? Porque dos ficheros que dicen lo mismo son dos sitios donde corregir. Y tarde o temprano corriges uno y te olvidas del otro. Entonces tienes dos versiones que se contradicen. El asistente ya no sabe cuál vale. La regla de **una sola fuente de verdad** está para evitar ese fallo, que es el más común de todo esto.
 

@@ -20,7 +20,7 @@ En un monorepo, los `CLAUDE.md` de otros equipos por encima de tu carpeta se car
 
 ## Comentarios HTML que no gastan contexto
 
-Los comentarios HTML de bloque en el `CLAUDE.md` se quitan antes de inyectar el contenido. Notas para el mantenedor humano que no cuestan tokens. Un detalle pequeño y muy práctico.
+Los comentarios HTML de bloque en el `CLAUDE.md` se quitan antes de inyectar el contenido. Notas para el mantenedor humano que no cuestan tokens.
 
 ## El recorte de `/doctor`
 
