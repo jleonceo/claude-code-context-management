@@ -78,13 +78,13 @@ cosa (las líneas con texto, saltándose las vacías). Dos métodos solo sirven 
 cuando los dos cuentan exactamente lo mismo.
 
 ```mermaid
-flowchart TD
+flowchart LR
     S[Sesión nueva] --> CL[CLAUDE.md<br/>se carga entero]
     S --> ME[MEMORY.md<br/>200 líneas o 25 KB]
-    CL & ME --> V[Ventana de contexto<br/>lo que ocupan no queda para el trabajo]
-    CL --> P{¿Hace falta en todas las sesiones?}
+    CL & ME --> V[Ventana de contexto<br/>lo que ocupan no queda<br/>para el trabajo]
+    CL --> P{¿Hace falta en<br/>todas las sesiones?}
     P -->|No| F[Se mueve entero a un fichero<br/>que se abre bajo demanda]
-    F --> PB[En su sitio queda un puntero blando<br/>una sola línea]
+    F --> PB[En su sitio queda<br/>un puntero blando<br/>una sola línea]
     P -->|Sí| Q[Se queda]
     style P fill:#e3f2fd,stroke:#1565c0,color:#0d47a1
     style PB fill:#e8f5e9,stroke:#2e7d32,color:#1b5e20

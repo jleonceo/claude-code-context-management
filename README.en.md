@@ -70,13 +70,13 @@ check earns its keep: a fifth way of counting returned 153, because it was count
 the same thing.
 
 ```mermaid
-flowchart TD
+flowchart LR
     S[New session] --> CL[CLAUDE.md<br/>loaded in full]
     S --> ME[MEMORY.md<br/>200 lines or 25 KB]
-    CL & ME --> V[Context window<br/>what they take is lost for the work]
-    CL --> P{Needed in every session?}
+    CL & ME --> V[Context window<br/>what they take is lost<br/>for the work]
+    CL --> P{Needed in<br/>every session?}
     P -->|No| F[Moved whole to a file<br/>opened on demand]
-    F --> PB[A soft pointer stays in its place<br/>a single line]
+    F --> PB[A soft pointer stays<br/>in its place<br/>a single line]
     P -->|Yes| Q[It stays]
     style P fill:#e3f2fd,stroke:#1565c0,color:#0d47a1
     style PB fill:#e8f5e9,stroke:#2e7d32,color:#1b5e20
